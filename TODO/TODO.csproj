@@ -14,12 +14,15 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
         <PackageReference Include="Microsoft.AspNetCore.SpaProxy" Version="6.0.8"/>
         <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.30" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.31" />
         <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.30">
           <PrivateAssets>all</PrivateAssets>
           <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
+        <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.16" />
     </ItemGroup>
 
     <ItemGroup>
@@ -28,6 +31,9 @@
         <None Remove="$(SpaRoot)**"/>
         <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**"/>
     </ItemGroup>
+
+
+
 
     <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
         <!-- Ensure Node.js is installed -->

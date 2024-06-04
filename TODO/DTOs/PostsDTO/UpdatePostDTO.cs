@@ -1,0 +1,8 @@
+﻿namespace TODO.DTOs.PostsDTO;
+
+public class UpdatePostDTO
+{
+    public string Data { get; set; }
+    public bool IsDone { get; set; }
+    public int CategoryId { get; set; }
+}

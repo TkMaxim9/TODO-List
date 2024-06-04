@@ -9,4 +9,6 @@ public class User
     public string Password { get; set; }
     
     public ICollection<Post> Posts { get; set; }
+    
+    public ICollection<Category> Categories { get; set; }
 }
